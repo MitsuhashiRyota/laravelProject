@@ -20994,6 +20994,27 @@ h2 {
 
 /** Common **/
 
+.hide {
+  display: none;
+}
+
+.scrolle {
+  color: white;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 155px;
+  z-index: 1;
+}
+
+.scroll-header-search {
+  margin-left: -18px;
+  margin-top: 10px;
+  margin-bottom: -20px;
+  width: 770px;
+  height: 36px;
+}
+
 .title-text-contents {
   width: 500px;
   height: 40px;

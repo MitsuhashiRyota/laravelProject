@@ -19,12 +19,4 @@ Route::get('/', function () {
 Route::get('foo/foo4', 'FooController@foo4');
 
 //          BladeTemplateURL, PHP ControllerName Fuction
-Route::get('Index/home', 'indexController@Index');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('home/', 'indexController@Index');

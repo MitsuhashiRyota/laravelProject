@@ -1,4 +1,4 @@
-@extends('../layouts/index')
+@extends('../layouts/home')
 @section('title', $title)
 @section('content')
     {{-- 個別ページの内容 --}}

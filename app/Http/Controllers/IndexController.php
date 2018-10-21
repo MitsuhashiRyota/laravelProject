@@ -8,7 +8,7 @@ class IndexController extends Controller
 {
     // Index View
     public function index() {
-        return view('Index.home', [
+        return view('home.home', [
             'title' => 'Home画面',
             'body' => 'Hello! Index!!'
         ]);
