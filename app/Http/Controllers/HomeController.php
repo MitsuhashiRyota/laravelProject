@@ -1,28 +1,30 @@
 <?php
-
+declare(strict_types=1);
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Service\NewsInformationService;
+
+use App\Constents\CommonConst;
+
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    public $title;
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        return view('home');
+    public $key = "NUll";
+
+    // Start Function
+    public function index(Request $request) {
+
+       // Page Titles
+       $this->title = CommonConst::HOME_TITLE;
+
+       // Get Page Create Parameters
+       $INewsInformation = new NewsInformationService();
+       $INewsInformation->getNewsInformation($this->key);
+
+       // Return
+       return view('home.home', ['title' => $this->title, 'INewsInformation' => $INewsInformation]);
     }
 }

@@ -22,7 +22,13 @@
     "autoload": {
         "classmap": [
             "database/seeds",
-            "database/factories"
+            "database/factories",
+            "app/Implement",
+            "app/Test",
+            "app/Extend",
+            "app/Service",
+            "app/Entity",
+            "app/Constents"
         ],
         "psr-4": {
             "App\\": "app/"

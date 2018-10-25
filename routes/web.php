@@ -19,4 +19,6 @@ Route::get('/', function () {
 Route::get('foo/foo4', 'FooController@foo4');
 
 //          BladeTemplateURL, PHP ControllerName Fuction
-Route::get('home/', 'indexController@Index');
+//Route::get('home/', 'indexController@Index');
+
+Route::get('home/', 'HomeController@index');
